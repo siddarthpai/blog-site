@@ -24,7 +24,7 @@ Let's see how far I can take this :))
 **4. Terminal and Linux** => Will have to learn how to use the terminal more efficiently _[will finally master vim?]_ and Linux commands. Hoping to make a useful cheatsheet\
 **5. Books and Courses** => Will be going through some books to become a better dev and have to do some courses like the _[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)_ [highly recommended]. Been learning alot through this.
 
-And ofcourse any cool side projects [this blog site was a good start ngl. got it to render raw .md files to html] and non technical stuff I get to experience will be put here as a part of the journey!
+And ofcourse any cool side projects [this blog site was a good start ngl. got it to render raw .md files to html from scratch] and non technical stuff I get to experience will be put here as a part of the journey!
 
 ## **Setup**
 
