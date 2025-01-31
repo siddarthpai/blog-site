@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Snowflake "
 excerpt: "Snowflake was the first DB I worked on. Here's a few cool things I learnt about it :))"
-date: "2025-01-28T05:35:07.322Z"
+date: "2025-01-31T05:35:07.322Z"
 tags: ["Databases"]
 ---
 
