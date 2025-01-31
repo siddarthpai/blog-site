@@ -201,5 +201,3 @@ Well this is the end. Another blog on actually using snowflake and it's advanced
 
 1. [http://aws.amazon.com/what-is/data-lake/](http://aws.amazon.com/what-is/data-lake/)
 2. [https://docs.snowflake.com/en/user-guide/warehouses](https://docs.snowflake.com/en/user-guide/warehouses)
-
-## 🎧 Music I listened to when composing this article :
