@@ -1,9 +1,8 @@
 ---
 title: "MONAD"
-excerpt: "Heard of a new design pattern we didnt hear off in college. Had to dive deep :)"
-date: "2025-01-22T05:35:07.322Z"
-
-tags: ["funcitonal programming", "design pattern", "pain"]
+excerpt: "Heard of a new design pattern we didn't hear off in college. Had to dive deep :)"
+date: "2025-01-28T05:35:07.322Z"
+tags: ["funcitonal programming", "design pattern"]
 ---
 
 ## MONADS
@@ -54,7 +53,6 @@ Think of it as a wrapper around a value that provides a consistent way to:
 • Chain operations (flatMap)
 
 ever heard of javascripts promises? they're basically monads[not technically, but they're almost there!]\
-
 if you're curious why,[_this_](https://rybicki.io/blog/2023/12/23/promises-arent-monads.html) may actually help you
 
 ### Promise Monad :
