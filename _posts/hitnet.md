@@ -119,8 +119,8 @@ Now is when I bring up the cool part.This insanely cool architecture achieves st
 ## End Note
 
 I wanna try running HITNet and its counterpart models and see how they work. Some cool resources to do so are mentioned below:\
-1.(*https://github.com/zjjMaiMai/TinyHITNet*)[https://github.com/zjjMaiMai/TinyHITNet]\
-2.(*https://github.com/ibaiGorordo/HITNET-Stereo-Depth-estimation*)[https://github.com/zjjMaiMai/TinyHITNet]
+1.[_https://github.com/zjjMaiMai/TinyHITNet_](https://github.com/zjjMaiMai/TinyHITNet)\
+2.[_https://github.com/ibaiGorordo/HITNET-Stereo-Depth-estimation_](https://github.com/zjjMaiMai/TinyHITNet)
 
 ## References :\
 
