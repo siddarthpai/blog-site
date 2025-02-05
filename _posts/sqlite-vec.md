@@ -74,6 +74,8 @@ The query is:\
 2.KNN then finds the closest vectors by distance using something like **cosine similarity**\
 3.and returns the closest, second closest values and so on ...
 
+![Vector Search Process Flow](https://i.imgur.com/QzxTlaZ.png)
+
 ## What is sqlite-vec?
 
 Now that we've understood all of this.\
@@ -100,6 +102,7 @@ It uses hamming distance instead of cosine distance btw\
 3.[<u>Matryoshka Embeddings</u>](https://arxiv.org/pdf/2205.13147)
 
 •has [<u>Hybrid Search</u>](https://alexgarcia.xyz/blog/2024/sqlite-vec-hybrid-search/index.html) [Vector Search + Full-Text search] [read this blog plspls, really cool]\
+![Hybrid Search Architecture](https://i.imgur.com/o37M8Kh.png)
 •has [<u>Metadata Filtering</u>](https://alexgarcia.xyz/blog/2024/sqlite-vec-metadata-release/index.html)
 
 ## What did I learn from this ?
