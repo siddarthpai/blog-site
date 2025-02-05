@@ -1,6 +1,6 @@
 ---
 title: "HITNet"
-excerpt: "Notes from the Data Wrangling of MIT's missing semester class"
+excerpt: "I read the HITNet paper and this is what I learnt"
 date: "2025-02-04T05:35:07.322Z"
 
 tags: ["CV", "Machine Learning", "NeuralNetworks"]
