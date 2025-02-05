@@ -13,24 +13,24 @@ But hopefully, I can explain this to y'all
 
 ### maps vs flatmaps[an intro]
 
-lets consider *```arr.map((x) => x*2);```\* \
-Now if the input is [1,2,3] the output will come out as [2,4,6]
+lets consider `arr.map((x) => x*2);`\
+Now if the input is `[1,2,3]` the output will come out as `[2,4,6]`
 
 This is because the signature of a map function is\
-Array<T> -> (T->U) -> Array<U>\
-**which basically means:**\
+`Array<T> -> (T->U) -> Array<U>`\
+_which basically means:_\
 \
-Array<T> => Takes in an array\
+`Array<T>` => Takes in an array\
 (T->U) => Function applied\
-Array<U> => arr.map((x) => x\*2); returns an array
+`Array<U> => arr.map((x) => x\*2);` returns an array
 
 Now, if we wrote\
-*```arr.flatmap((x) => x*2);```\*\
+`arr.flatmap((x) => x*2);`\
 Now if the input is [1,2,3] the output will come out as [1,2,2,4,3,6]
 
 Why?
 This is cause the signature for a flatmap function is as follows\
-Array<T> -> (T->Array<U>) -> Array<U>\
+`Array<T> -> (T->Array<U>) -> Array<U>`\
 \
 which basically means it will take each element in the array, apply the function on it and then return an array with [element,output of function] and then flat it out onto a single list.
 
