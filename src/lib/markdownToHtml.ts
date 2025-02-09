@@ -4,6 +4,7 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
+import rehypeRaw from 'rehype-raw';  // Add this import
 
 export default async function markdownToHtml(markdown: string) {
   const result = await remark()
@@ -21,6 +22,7 @@ export default async function markdownToHtml(markdown: string) {
         }
       }
     })
+    .use(rehypeRaw)  // Add this line to process HTML in markdown
     .use(rehypeSlug)
     .use(rehypeHighlight, {
       ignoreMissing: true,
