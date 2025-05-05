@@ -182,7 +182,9 @@ This is safe, but means two fsync() operations (so, two disk flushes), and more 
 ## Should You Still Worry About Torn Writes?
 
 \> If You Use Modern Storage and Filesystems: Torn writes are rare. Most modern systems guarantee atomic 4KB writes.
+
 \> Checksums and WAL are still best practice. They protect against other forms of corruption (e.g., bit rot, firmware bugs).
+
 \> Doublewrite buffers may be redundant. Some databases are removing them for performance.
 
 Some argue that enterprise SSDs equipped with supercapacitors for power-loss protection, the same technology often cited for enabling asynchronous completion of `fsync()` are also resistant to torn writes.
