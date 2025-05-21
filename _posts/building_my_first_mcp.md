@@ -9,21 +9,25 @@ tags: ["MCP's", "LLM's"]
 ## Pre-requisites
 
 • MCP Documentation\
+(https://modelcontextprotocol.io/introduction)
+
 • FastMCP\
+(https://gofastmcp.com/getting-started/welcome)
+
 • A couple of concepts on MCP’s that would help :\
- ◦Different types of transport : stdIO/SSE\
-◦What exactly is a MCP server and an MCP client? : shown in the demo\
-◦Some core functionality and what we get with the python package
+ &nbsp; &nbsp;◦ Different types of transport : stdIO/SSE\
+&nbsp; &nbsp;◦ Some core functionality and what we get with the python\
+ &nbsp; &nbsp; &nbsp;package
 
 ## What is FastMCP?
 
 FastMCP is a MCP protocol which is powerful but implementing it involves a lot of boilerplate - server setup, protocol handlers, content types, error management. FastMCP handles all the complex protocol details and server management, so you can focus on building great tools.
 
-It’s designed to be high-level and Pythonic; in most cases, decorating a function is all you need
+It’s designed to be high-level and Pythonic; in most cases, decorating a function is all you need ＼(＾ O ＾)／
 
 If you look at the official MCP documentation, you’ll see they used FastMCP as well; they contributed to the MCP documentation!
 
-In this example which I built, I used FastMCP v2.
+In this example which I built, I used `FastMCP v2.`
 
 ## Different Transport Techniques
 
@@ -33,7 +37,7 @@ Transports in the Model Context Protocol (MCP) provide the foundation for commun
 
 **Server-Sent Events (SSE):** SSE transport enables server-to-client streaming with HTTP POST requests for client-to-server communication.
 
-Use SSE when:
+Use SSE when:\
 • Only server-to-client streaming is needed\
 • Working with restricted networks\
 • Implementing simple updates
@@ -63,17 +67,19 @@ Return types are automatically converted for the LLM:
 • `str` → text\
 • `dict`, `list`, `Pydantic` model → JSON\
 • `bytes` → base64-encoded blob\
-• None → no content
+• `None` → no content
 
-_You can use async def for tools that do I/O (like network requests), so your server doesn’t get blocked._
+_You can use `async` def for tools that do I/O (like network requests), so your server doesn’t get blocked._
 
 ### Using Annotations in tools :
 
-We can add in **annotations** : [Annotations are extra metadata that help client applications (like UIs or LLMs) understand how to use or display the tool.]\
-They do not affect the tool’s logic, but they help with things like:
+We can add in **annotations** :
+Annotations are extra metadata that help client applications (like UIs or LLMs) understand how to use or display the tool.\
+They _do not affect_ the tool’s logic
 
-How to add annotations:
-<Insert image here >
+### How to add annotations:
+
+![Annotations](https://i.postimg.cc/bY1q6ggB/image-8.png)
 
 ### Using context in tools :
 
@@ -81,9 +87,9 @@ Context is a special helper you add to your tool function.
 
 It lets your tool log messages, show progress, read files, ask the LLM for help, and know who called it.
 
-Used by adding ctx: Context as a parameter and calling its methods.
+Used by adding `ctx`: Context as a parameter and calling its methods.
 
-<Insert context images here>
+![Context](https://i.postimg.cc/Fzbm7F14/image-7.png)
 
 ## What are Resources ? (sort of like GET endpoints)
 
@@ -101,12 +107,13 @@ Resources are not tools (which do things); resources are data (which you read).
 
 • You define a resource in your Python code, using the @mcp.resource decorator.\
 • You give it a unique URI (like "resource://greeting" or "data://config").\
-• When a client (like an LLM) asks for that URI, FastMCP:\
-• Finds your function or file for that resource.\
-• Runs the function (if it’s dynamic) or reads the file (if it’s static).
-Returns the data to the client.
+• When a client (like an LLM) asks for that URI, FastMCP:
 
-<Insert resource image here >
+1.Finds your function or file for that resource.\
+2.Runs the function (if it’s dynamic) or reads the file (if it’s static).\
+3.Returns the data to the client.
+
+![Resources](https://i.postimg.cc/nrfpF9F2/image-6.png)
 
 ## What are Prompts?
 
@@ -123,11 +130,13 @@ Returns the data to the client.
 •Runs your function with those values.\
 •Returns the generated message(s) to the LLM.
 
-<insert prompt image here>
+![Prompt](https://i.postimg.cc/N0VQnPZW/image-5.png)
 
 Example code that uses the following concepts :
 
 First, try to ask your copilot what the weather is like in your city, It should say it doesn't have access to weather information or, it will suggest building an weather API application to fetch the data.
+
+![Copilot Before](https://i.postimg.cc/fTZD1dgT/Screenshot-2025-05-21-at-6-54-06-PM.png)
 
 Write this code and dump it in a python file
 
@@ -137,7 +146,7 @@ from fastmcp import FastMCP
 
 mcp = FastMCP(
     "weather-mcp",
-    description="MCP server for accessing Netradyne's weather documentation",
+    description="MCP server for accessing weather documentation",
     host="0.0.0.0",
     port=8052,
     transport="sse",
@@ -172,7 +181,14 @@ if __name__== "__main__":
 ```
 
 install fastmcp using `pip3 install fastmcp`
+
 run the file on terminal
+
 `python3 <file_name>.py`
 
-This was how I built an MCP at work, I obviously cant open source that code, but y'all should try building one, super easy; super fun!
+You should see it now using the tool and giving responses like this
+![Copilot After](https://i.postimg.cc/mDHTWysh/Screenshot-2025-05-21-at-6-53-31-PM.png)
+Also, notice how we just returned "Rainy", but now, the _MCP Client_ uses this returned data viz Rainy and formulates full sentences and even supports it if it matches with the existing pre-trained data.
+
+This was how I built an MCP at work, I obviously cant open source that code :(\
+but y'all should try building one, super easy; super fun!
