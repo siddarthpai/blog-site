@@ -1,5 +1,4 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import cn from "classnames";
@@ -24,9 +23,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link href="/favicon/favicon.png" />
-      </head>
       <body
         className={cn(
           jetBrainsMono.className,

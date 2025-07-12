@@ -16,3 +16,18 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+
+.markdown ul {
+  @apply list-disc list-inside pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal list-inside pl-6;
+}
+
+.markdown a {
+  @apply underline;
+  position: relative;       /* establish positioning context */
+  text-decoration: underline;
+}

@@ -24,11 +24,7 @@ export function PostPreview({
   return (
     <Link href={`/posts/${slug}`}>
       <div className="mb-8 border-b pb-8">
-        <h3 className="text-3xl mb-3 leading-snug">
-          <Link href={`/posts/${slug}`} className="hover:underline">
-            {title}
-          </Link>
-        </h3>
+        <h3 className="text-3xl mb-3 leading-snug hover:underline">{title}</h3>
         <div className="mb-4">
           <Tags tags={tags} />
         </div>
