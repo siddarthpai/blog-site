@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           "dark:bg-neutral-900 dark:text-slate-400"
         )}
       >
+        <Analytics />
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
         <Footer />
