@@ -1,5 +1,5 @@
 ---
-title: "Why do LLM's Hallucinate"
+title: "Why do LLM's Hallucinate Pt.1"
 excerpt: "OpenAI just dropped a crazy paper on why LLM's hallucinate !"
 date: "2025-09-15T05:35:07.322Z"
 
